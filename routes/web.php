@@ -25,4 +25,4 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
-Route::get('/home','HomeController@index');
+Route::get('/home','App\Http\Controllers\HomeController@index');

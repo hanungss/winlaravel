@@ -10,7 +10,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 class HomeController extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, Request;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function index()
     {
         echo "Welcome to home page";
