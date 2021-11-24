@@ -16,6 +16,7 @@
         Nama <input type="text" required="required" name="nama" value="{{ $wrg->nama }}"> <br />
         Alamat <input type="text" required="required" name="alamat" value="{{ $wrg->alamat }}"> <br />
         Foto <input type="text" required="required" name="foto" value="{{ $wrg->foto }}"> <br />
+        <input type="submit" value="Simpan Perubahan">
     </form>
     @endforeach
 </body>

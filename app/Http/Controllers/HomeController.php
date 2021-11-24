@@ -39,6 +39,12 @@ class HomeController extends BaseController
         return view('edit', ['warga' => $warga]);
     }
 
+    public function hapus($id)
+    {
+        DB::table('warga')->where('id', $id)->delete();
+        return redirect('/home');
+    }
+
     public function update(Request $request)
     {
         DB::table('warga')->where('id', $request->id)->update([

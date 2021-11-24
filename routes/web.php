@@ -29,10 +29,17 @@ Route::get('/profil', function () {
 
 Route::get('/home','App\Http\Controllers\HomeController@index');
 
+// Route::get('/home/edit{id}', [App\Http\Controllers\HomeController::class, 'edit']);
+
 Route::get('/home/tambah', 'App\Http\Controllers\HomeController@tambahData');
 
 Route::get('/home/simpan', 'App\Http\Controllers\HomeController@simpan');
 
-Route::get('/home/edit{id}', 'App\Http\Controllers\HomeController@edit');
+Route::get('/home/edit/{id}', 'App\Http\Controllers\HomeController@edit');
+
+Route::get('/home/hapus/{id}', 'App\Http\Controllers\HomeController@hapus');
 
 Route::get('/home/update', 'App\Http\Controllers\HomeController@update');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
