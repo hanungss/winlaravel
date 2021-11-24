@@ -25,4 +25,14 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
+//dont forget for use App\Http\Controllers\HomeController
+
 Route::get('/home','App\Http\Controllers\HomeController@index');
+
+Route::get('/home/tambah', 'App\Http\Controllers\HomeController@tambahData');
+
+Route::get('/home/simpan', 'App\Http\Controllers\HomeController@simpan');
+
+Route::get('/home/edit{id}', 'App\Http\Controllers\HomeController@edit');
+
+Route::get('/home/update', 'App\Http\Controllers\HomeController@update');
